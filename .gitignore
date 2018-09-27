@@ -82,3 +82,9 @@ dist
 
 # Mac OS
 .DS_Store
+
+# PWA module
+sw.*
+
+# Vscode
+.vscode

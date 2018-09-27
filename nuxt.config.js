@@ -43,8 +43,17 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // Doc : https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
+
+  manifest: {
+    name: 'Vocast',
+    lang: 'fr',
+    display: 'standalone'
+  },
+
   /*
   ** Axios module configuration
   */
@@ -66,7 +75,7 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
     }

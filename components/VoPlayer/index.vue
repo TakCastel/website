@@ -1,5 +1,5 @@
 <template>
   <div>
-    page 1
+    bouton play
   </div>
 </template>
