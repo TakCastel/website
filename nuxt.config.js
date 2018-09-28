@@ -35,7 +35,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    '@/plugins/global'
   ],
 
   /*
@@ -48,6 +49,9 @@ module.exports = {
     '@nuxtjs/pwa'
   ],
 
+  /*
+  ** Manifest options
+  */
   manifest: {
     name: 'Vocast',
     lang: 'fr',

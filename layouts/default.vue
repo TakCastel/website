@@ -1,11 +1,12 @@
 <template>
   <v-app dark>
     <v-toolbar app>
-      <v-toolbar-title>Vocast</v-toolbar-title>
+      <v-toolbar-title>title</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid>
         <nuxt/>
+        <vo-player/>
       </v-container>
     </v-content>
     <v-footer app>
