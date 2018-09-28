@@ -1,6 +1,12 @@
 export default {
   state: {
     isPlaying: false,
+    podcast: {
+      metadatas : {
+        title: 'Podcast title',
+        author: 'Grougrou'
+      }
+    }
   },
   actions: {
     /**

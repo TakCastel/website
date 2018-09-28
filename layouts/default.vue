@@ -6,6 +6,7 @@
     <v-content>
       <v-container fluid>
         <nuxt/>
+        <vo-player/>
       </v-container>
     </v-content>
     <v-footer app>
