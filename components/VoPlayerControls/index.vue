@@ -1,11 +1,12 @@
 <template>
-  <v-btn @click="handleClick">
-    <span v-if="status">
-      Pause
-    </span>
-    <span v-else>
-      Play
-    </span>
+  <v-btn
+    icon
+    fab
+    dark
+    color="primary"
+    @click="handleClick">
+    <v-icon v-if="status">pause</v-icon>
+    <v-icon v-else>play_arrow</v-icon>
   </v-btn>
 </template>
 

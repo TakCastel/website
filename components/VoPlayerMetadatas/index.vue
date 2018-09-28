@@ -1,5 +1,6 @@
 <template>
   <div>
-    metadatas
+    podcast name
+    podcaster
   </div>
 </template>

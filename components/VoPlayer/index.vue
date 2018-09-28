@@ -3,7 +3,7 @@
     the player event handler
     <vo-player-metadatas/>
     <vo-player-controls
-      :status="isPlaying"
+      :status="status"
     />
   </div>
 </template>
@@ -14,7 +14,7 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      isPlaying: state => state.player.isPlaying
+      status: state => state.player.isPlaying
     })
   }
 }
