@@ -1,6 +1,8 @@
 # vocast-app
 
-> Vocast application
+> Podcast application using [Vuetify](https://vuetifyjs.com/en/) and [Nuxt](https://fr.nuxtjs.org/)
+
+[Demo](http://olympic-platypus.surge.sh/)
 
 ## Build Setup
 
