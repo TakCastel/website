@@ -1,7 +1,7 @@
 <template>
   <v-card
     flat
-    class="metadatas"
+    class="metadatas ma-2"
   >
     <span>
       {{ metadatas.title }}
@@ -30,6 +30,5 @@ export default {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin: 6px 8px;
   }
 </style>
