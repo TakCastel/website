@@ -26,12 +26,12 @@ export default {
 
 <style lang="scss">
   .player {
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     left: 16px;
     right: 16px;
-    bottom: 54px;
+    bottom: 16px;
   }
 </style>
