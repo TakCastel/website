@@ -1,0 +1,41 @@
+<template>
+  <v-btn
+    :ripple="false"
+    :class="{ toright: checkmode}"
+    icon
+    color="transparent"
+    @click="handleClick">
+    <v-icon 
+      v-if="checkmode" 
+      color="white">
+      expand_more
+    </v-icon>
+    <v-icon 
+      v-else 
+      color="white">
+      expand_less
+    </v-icon>
+  </v-btn>
+</template>
+
+<script>
+export default {
+  props: {
+    checkmode: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$store.dispatch('clickLayoutButton')
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  .toright {
+    align-self: flex-end
+  }
+</style>

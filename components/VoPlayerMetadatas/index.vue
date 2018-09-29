@@ -1,7 +1,7 @@
 <template>
   <v-card
     flat
-    class="metadatas ma-2"
+    class="metadatas ma-1 pa-1"
   >
     <span>
       {{ metadatas.title }}
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .metadatas {
     flex: 1;
     display: flex;
