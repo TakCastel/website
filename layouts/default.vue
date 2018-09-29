@@ -9,7 +9,9 @@
         <vo-player/>
       </v-container>
     </v-content>
-    <v-footer app>
+    <vo-bottom-nav/>
+    <v-footer
+      v-show="$vuetify.breakpoint.xsAndUp">
       © 2018
     </v-footer>
   </v-app>
