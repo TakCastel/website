@@ -1,0 +1,30 @@
+<template>
+  <v-bottom-nav
+    v-show="$vuetify.breakpoint.xsOnly"
+    :value="true"
+    app
+    absolute
+    color="grey darken-4">
+    <v-btn
+      flat
+      to="/"
+      value="index">
+      <span>Accueil</span>
+      <v-icon>home</v-icon>
+    </v-btn>
+    <v-btn
+      flat
+      to="/whatshot"
+      value="whatshot">
+      <span>Récents</span>
+      <v-icon>whatshot</v-icon>
+    </v-btn>
+    <v-btn
+      flat
+      to="archives"
+      value="archives">
+      <span>Archives</span>
+      <v-icon>library_music</v-icon>
+    </v-btn>
+  </v-bottom-nav>
+</template>
