@@ -1,10 +1,12 @@
 export default {
   state: {
     isPlaying: false,
+    layoutMode: 'fixedBottom',
     podcast: {
       metadatas : {
-        title: 'Podcast title',
-        author: 'Grougrou'
+        author: 'Author',
+        cover: 'https://picsum.photos/640',
+        title: 'Podcast title'
       }
     }
   },
@@ -18,14 +20,34 @@ export default {
       let status
       state.isPlaying ? status = false : status = true
       commit('setPlayerStatus', status)
+    },
+
+    /**
+     * Launched when the user click on layout button
+     * to display fullscreen mode or bottom player
+     */
+    clickLayoutButton ({ state, commit }) {
+      let mode
+      state.layoutMode === 'fullScreen' ? 
+        mode = 'fixedBottom' : 
+        mode = 'fullScreen'
+      commit('setLayoutMode', mode)
     }
   },
-  /**
-   * Playing or paused player status change 
-   */
+
   mutations: {
+    /**
+     * Playing or paused player status change 
+     */
     setPlayerStatus (state, status) {
       state.isPlaying = status
+    },
+
+    /**
+     * Fullscreen or fixed bottom player mode
+     */
+    setLayoutMode (state, mode) {
+      state.layoutMode = mode
     }
   }
 }

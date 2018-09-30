@@ -1,7 +1,8 @@
 <template>
   <v-card
+    :class="{ flex_center: isFullScreen }"
+    class="metadatas ma-1 pa-1"
     flat
-    class="metadatas"
   >
     <span>
       {{ metadatas.title }}
@@ -23,13 +24,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .metadatas {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin: 6px 8px;
   }
 </style>

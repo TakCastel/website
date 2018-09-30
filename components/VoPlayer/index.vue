@@ -1,5 +1,6 @@
 <template>
   <v-card
+    :class="isFullScreen ? 'fullscreen' : 'bottom'"
     class="player"
   >
     <vo-player-controls
@@ -8,6 +9,10 @@
     <vo-player-metadatas
       :metadatas="podcast.metadatas"
     />
+    <vo-player-cover
+      :image="podcast.metadatas.cover"
+    />
+    <vo-player-layout/>
   </v-card>
 </template>
 
@@ -18,20 +23,30 @@ export default {
   computed: {
     ...mapState({
       status: state => state.player.isPlaying,
-      podcast: state => state.player.podcast
+      podcast: state => state.player.podcast,
     })
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .player {
     position: fixed;
     display: flex;
-    align-items: stretch;
+    z-index: 2;
+  }
+  .bottom {
+    position: absolute;
+    align-items: center;
     justify-content: space-between;
     left: 16px;
     right: 16px;
-    bottom: 54px;
+    bottom: 16px;
+  }
+  .fullscreen {
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column-reverse;
+    top: 0; left: 0; bottom: 0; right: 0;
   }
 </style>
