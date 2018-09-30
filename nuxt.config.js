@@ -28,13 +28,15 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/assets/style/global.scss'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/fullscreen',
     '@/plugins/vuetify',
     '@/plugins/global'
   ],
