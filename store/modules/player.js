@@ -4,8 +4,9 @@ export default {
     layoutMode: 'fixedBottom',
     podcast: {
       metadatas : {
-        title: 'Podcast title',
-        author: 'Grougrou'
+        author: 'Author',
+        cover: 'https://picsum.photos/640',
+        title: 'Podcast title'
       }
     }
   },
