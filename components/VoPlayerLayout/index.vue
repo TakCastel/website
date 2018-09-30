@@ -1,12 +1,12 @@
 <template>
   <v-btn
     :ripple="false"
-    :class="{ toright: checkmode}"
+    :class="{ toright: isFullScreen}"
     icon
     color="transparent"
     @click="handleClick">
     <v-icon 
-      v-if="checkmode" 
+      v-if="isFullScreen" 
       color="white">
       expand_more
     </v-icon>
@@ -20,12 +20,6 @@
 
 <script>
 export default {
-  props: {
-    checkmode: {
-      type: Boolean,
-      default: false
-    }
-  },
   methods: {
     handleClick () {
       this.$store.dispatch('clickLayoutButton')

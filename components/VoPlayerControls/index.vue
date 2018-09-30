@@ -1,9 +1,9 @@
 <template>
   <v-card
-    :class="{ 'mb-3': checkmode }"
+    :class="{ 'mb-3 self_center': isFullScreen }"
     flat>
     <v-btn 
-      v-if="checkmode"
+      v-if="isFullScreen"
       color="transparent"
       icon>
       <v-icon>replay_10</v-icon>
@@ -18,7 +18,7 @@
       <v-icon v-else>play_arrow</v-icon>
     </v-btn>
     <v-btn 
-      v-if="checkmode"
+      v-if="isFullScreen"
       color="transparent"
       icon>
       <v-icon>forward_10</v-icon>
@@ -33,10 +33,6 @@ export default {
       type: Boolean,
       default: false
     },
-    checkmode : {
-      type: Boolean,
-      default: false,
-    }
   },
 
   methods: {

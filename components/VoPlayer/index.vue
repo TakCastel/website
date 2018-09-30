@@ -4,15 +4,15 @@
     class="player"
   >
     <vo-player-controls
-      :checkmode="isFullScreen"
       :status="status"
     />
     <vo-player-metadatas
       :metadatas="podcast.metadatas"
     />
-    <vo-player-layout
-      :checkmode="isFullScreen"
+    <vo-player-cover
+      :image="podcast.metadatas.cover"
     />
+    <vo-player-layout/>
   </v-card>
 </template>
 
@@ -24,12 +24,7 @@ export default {
     ...mapState({
       status: state => state.player.isPlaying,
       podcast: state => state.player.podcast,
-      layout: state => state.player.layoutMode
-    }),
-
-    isFullScreen: function () {
-      return this.layout === 'fullScreen'
-    }
+    })
   }
 }
 </script>
@@ -49,7 +44,7 @@ export default {
     bottom: 16px;
   }
   .fullscreen {
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-direction: column-reverse;
     top: 0; left: 0; bottom: 0; right: 0;

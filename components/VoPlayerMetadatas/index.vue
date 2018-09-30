@@ -1,7 +1,8 @@
 <template>
   <v-card
-    flat
+    :class="{ flex_center: isFullScreen }"
     class="metadatas ma-1 pa-1"
+    flat
   >
     <span>
       {{ metadatas.title }}
