@@ -1,11 +1,12 @@
 <template>
   <v-card
     :class="isFullScreen ? 'fullscreen' : 'bottom'"
-    class="player"
+    class="player pt-2"
   >
     <vo-player-controls
       :status="status"
     />
+    <vo-player-progress/>
     <vo-player-metadatas
       :metadatas="podcast.metadatas"
     />
@@ -36,7 +37,7 @@ export default {
     z-index: 2;
   }
   .bottom {
-    position: absolute;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
     left: 16px;
@@ -48,5 +49,11 @@ export default {
     justify-content: center;
     flex-direction: column-reverse;
     top: 0; left: 0; bottom: 0; right: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    .bottom {
+      bottom: 72px;
+    }
   }
 </style>

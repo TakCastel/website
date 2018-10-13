@@ -4,7 +4,8 @@
     :src="image"
     :lazy-src="image"
     aspect-ratio="1"
-    class="grey lighten-2 desktop-img"
+    class="grey lighten-2"
+    height="100"
   >
     <v-layout
       slot="placeholder"
@@ -31,13 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  @media screen and (min-width: 960px) and (orientation: landscape) {
-    .desktop-img {
-      width: 75vh;
-      align-self: center;
-      flex: 0 auto;
-    }
-  }
-</style>
