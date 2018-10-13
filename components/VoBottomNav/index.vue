@@ -2,9 +2,9 @@
   <v-bottom-nav
     v-show="$vuetify.breakpoint.xsOnly"
     :value="true"
-    app
+    color="grey darken-4"
     absolute
-    color="grey darken-4">
+    app>
     <v-btn
       flat
       to="/"

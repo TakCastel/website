@@ -1,7 +1,7 @@
 <template>
   <v-btn
     :ripple="false"
-    :class="{ toright: isFullScreen}"
+    :class="{ self_end: isFullScreen}"
     icon
     color="transparent"
     @click="handleClick">
@@ -27,9 +27,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .toright {
-    align-self: flex-end
-  }
-</style>

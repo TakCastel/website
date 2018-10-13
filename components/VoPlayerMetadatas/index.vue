@@ -1,7 +1,7 @@
 <template>
   <v-card
     :class="{ flex_center: isFullScreen }"
-    class="metadatas ma-1 pa-1"
+    class="metadatas overflow_hidden ma-1 pa-1"
     flat
   >
     <span>
