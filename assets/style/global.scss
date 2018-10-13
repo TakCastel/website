@@ -1,8 +1,16 @@
 #app {
+  // Helpers
+  .overflow_hidden {
+    overflow: hidden;
+  }
+  // Flexbox
   .flex_center {
     align-items: center;
   }
   .self_center {
     align-self: center;
+  }
+  .self_end {
+    align-self: flex-end;
   }
 }
