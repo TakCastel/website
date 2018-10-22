@@ -1,6 +1,7 @@
 <template>
   <v-card
-    :class="{ 'mb-3 self_center': isFullScreen }"
+    :class="{ 'my-3 self_center': isFullScreen }"
+    class="transparent"
     flat>
     <v-btn 
       v-if="isFullScreen"
