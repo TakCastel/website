@@ -2,6 +2,18 @@
   <v-app dark>
     <v-toolbar app>
       <v-toolbar-title>title</v-toolbar-title>
+      <v-spacer/>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn 
+          flat 
+          to="/">Accueil</v-btn>
+        <v-btn 
+          flat 
+          to="/whatshot">Récents</v-btn>
+        <v-btn 
+          flat 
+          to="/archives">Archives</v-btn>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -11,7 +23,7 @@
     </v-content>
     <vo-bottom-nav/>
     <v-footer
-      v-show="$vuetify.breakpoint.xsAndUp">
+      class="hidden-xs-and-down">
       © 2018
     </v-footer>
   </v-app>

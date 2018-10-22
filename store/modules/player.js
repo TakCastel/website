@@ -1,11 +1,17 @@
 export default {
   state: {
+    // player global state
     isPlaying: false,
+    currentTime: 0,
+
+    // layout handled in fullscreen.js plugin
+    layoutMode: 'fixedBottom', // fixedBottom or fullScreen
+
+    // podcast infos
     podcast: {
-      metadatas : {
-        title: 'Podcast title',
-        author: 'Grougrou'
-      }
+      author: 'Author',
+      cover: 'https://picsum.photos/640',
+      title: 'Podcast title'
     }
   },
   actions: {
@@ -15,8 +21,7 @@ export default {
      * so the play/pause toggle is fully supported
      */
     clickPlayButton ({ state, commit }) {
-      let status
-      state.isPlaying ? status = false : status = true
+      let status = state.isPlaying ? false : true
       commit('setPlayerStatus', status)
     }
   },
@@ -26,6 +31,20 @@ export default {
   mutations: {
     setPlayerStatus (state, status) {
       state.isPlaying = status
+    },
+
+    /**
+     * Fullscreen or fixed bottom player mode
+     */
+    setLayoutMode (state, mode) {
+      state.layoutMode = mode
+    },
+
+    /**
+     * Update the currentTime via passed value
+     */
+    updateCurrentTime (state, value) {
+      state.currentTime = value
     }
   }
 }

@@ -1,0 +1,32 @@
+#app {
+  // Helpers
+  .overflow_hidden {
+    overflow: hidden;
+  }
+
+  // Flexbox
+  .flex {
+    &_center {
+      align-items: center;
+    }
+  }
+
+  .self {
+    &_center {
+      align-self: center;
+    }
+    &_end {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobile {
+    &_flex {
+      &_1 {
+        flex: 1
+      }
+    }
+  }
+}

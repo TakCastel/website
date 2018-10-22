@@ -66,6 +66,16 @@ module.exports = {
   },
 
   /*
+  ** Generate configuration
+  */
+  generate: {
+    routes: [
+      '/archives',
+      '/whatshot'
+    ]
+  },
+
+  /*
   ** Build configuration
   */
   build: {
