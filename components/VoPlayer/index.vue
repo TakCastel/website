@@ -1,17 +1,19 @@
 <template>
   <v-card
     :class="isFullScreen ? 'fullscreen' : 'bottom'"
-    class="player pt-2"
+    class="player"
   >
     <vo-player-controls
       :status="status"
     />
-    <vo-player-progress/>
     <vo-player-metadatas
-      :metadatas="podcast.metadatas"
+      :metadatas="podcast"
+    />
+    <vo-player-progress
+      :progress="progress"
     />
     <vo-player-cover
-      :image="podcast.metadatas.cover"
+      :image="podcast.cover"
     />
     <vo-player-layout/>
   </v-card>
@@ -25,6 +27,7 @@ export default {
     ...mapState({
       status: state => state.player.isPlaying,
       podcast: state => state.player.podcast,
+      progress: state => state.player.currentTime
     })
   }
 }
@@ -42,7 +45,7 @@ export default {
     justify-content: space-between;
     left: 16px;
     right: 16px;
-    bottom: 16px;
+    bottom: 52px;
   }
   .fullscreen {
     align-items: stretch;
