@@ -4,11 +4,9 @@ export default {
     isPlaying: false,
     layoutMode: 'fixedBottom',
     podcast: {
-      metadatas : {
-        author: 'Author',
-        cover: 'https://picsum.photos/640',
-        title: 'Podcast title with long text lorem ipsum'
-      }
+      author: 'Author',
+      cover: 'https://picsum.photos/640',
+      title: 'Podcast title'
     }
   },
   actions: {
