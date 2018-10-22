@@ -6,7 +6,7 @@ export default {
       metadatas : {
         author: 'Author',
         cover: 'https://picsum.photos/640',
-        title: 'Podcast title'
+        title: 'Podcast title with long text lorem ipsum'
       }
     }
   },
