@@ -3,14 +3,30 @@
   .overflow_hidden {
     overflow: hidden;
   }
+
   // Flexbox
-  .flex_center {
-    align-items: center;
+  .flex {
+    &_center {
+      align-items: center;
+    }
   }
-  .self_center {
-    align-self: center;
+
+  .self {
+    &_center {
+      align-self: center;
+    }
+    &_end {
+      align-self: flex-end;
+    }
   }
-  .self_end {
-    align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile {
+    &_flex {
+      &_1 {
+        flex: 1
+      }
+    }
   }
 }

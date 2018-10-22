@@ -1,5 +1,6 @@
 export default {
   state: {
+    // player global state
     isPlaying: false,
     layoutMode: 'fixedBottom',
     podcast: {
@@ -17,8 +18,7 @@ export default {
      * so the play/pause toggle is fully supported
      */
     clickPlayButton ({ state, commit }) {
-      let status
-      state.isPlaying ? status = false : status = true
+      let status = state.isPlaying ? false : true
       commit('setPlayerStatus', status)
     },
 
@@ -48,6 +48,13 @@ export default {
      */
     setLayoutMode (state, mode) {
       state.layoutMode = mode
+    },
+
+    /**
+     * Update the currentTime via passed value
+     */
+    updateCurrentTime (state, value) {
+      state.currentTime = value
     }
   }
 }
