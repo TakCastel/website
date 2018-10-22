@@ -1,7 +1,7 @@
 <template>
   <v-card
-    :class="{ flex_center: isFullScreen }"
-    class="metadatas overflow_hidden ma-1 pa-1"
+    :class="{ 'mobile_flex_1 overflow_hidden': !isFullScreen, 'flex_center metadatas_visible' : isFullScreen }"
+    class="transparent metadatas ma-1 pa-1"
     flat
   >
     <span>
@@ -26,10 +26,12 @@ export default {
 
 <style lang="scss" scoped>
   .metadatas {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    &_visible {
+      overflow: unset;
+    }
   }
 </style>
